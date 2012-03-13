@@ -10,8 +10,8 @@
 $args = array( 
   
 //////Author Parameters - Show posts associated with certain author.
-    'author' => 1,2,3,//(int) - use author id [use minus (-) to exclude authors by ID ex. 'author' => -1,-2,-3,]
-    'author_name' => 'luetkemj',//(string) - use 'user_nicename' (NOT name)
+    'author' => 1,2,3,                        //(int) - use author id [use minus (-) to exclude authors by ID ex. 'author' => -1,-2,-3,]
+    'author_name' => 'luetkemj',              //(string) - use 'user_nicename' (NOT name)
   
 //////Category Parameters - Show posts associated with certain categories.
     'cat' => 5,//(int) - use category id.
@@ -38,7 +38,7 @@ $args = array(
         'taxonomy' => 'color',                //(string) - Taxonomy.
         'field' => 'slug',                    //(string) - Select taxonomy term by ('id' or 'slug')
         'terms' => array( 'red', 'blue' ),    //(int/string/array) - Taxonomy term(s).
-        'include_children' => true,           //(boolean) - Whether or not to include children for hierarchical taxonomies. Defaults to true.
+        'include_children' => true,           //(bool) - Whether or not to include children for hierarchical taxonomies. Defaults to true.
         'operator' => 'IN'                    //(string) - Operator to test. Possible values are 'IN', 'NOT IN', 'AND'.
       ),
       array(
@@ -57,7 +57,7 @@ $args = array(
       'pagename' => 'contact_us/canada',      //(string) - Display child page using the slug of the parent and the child page, separated by a slash
       'post_parent' => 1,                     //(int) - use page id. Return just the child Pages.
       'post__in' => array(1,2,3),             //(array) - use post ids. Specify posts to retrieve.
-      'post__not_in' => array(1,2,3),         // (array) - use post ids. Specify post NOT to retrieve.
+      'post__not_in' => array(1,2,3),         //(array) - use post ids. Specify post NOT to retrieve.
       //NOTE: you cannot combine 'post__in' and 'post__not_in' in the same query
 
 //////Type & Status Parameters - Show posts associated with certain type or status.
@@ -113,7 +113,7 @@ $args = array(
 																							 
 																							 
 //////Sticky Post Parameters - Show Sticky Posts or ignore them.
-      'ignore_sticky_posts' => 0,             //(bool) - ignore sticky posts or not. Default value is 0, don't ignore. Ignore/exclude sticky posts being included at the beginning of posts returned, but the sticky post will still be returned in the natural order of that list of posts returned.
+      'ignore_sticky_posts' => false,         //(bool) - ignore sticky posts or not. Default value is false, don't ignore. Ignore/exclude sticky posts being included at the beginning of posts returned, but the sticky post will still be returned in the natural order of that list of posts returned.
       //NOTE: For more info on sticky post queries see: http://codex.wordpress.org/Class_Reference/WP_Query#Sticky_Post_Parameters
 																							 
 																							 
@@ -149,7 +149,7 @@ $args = array(
       'perm' => 'readable'                    //(string) Possible values are 'readable', 'editable' (possible more ie all capabilities although I have not tested)
 
 //////Parameters relating to caching
-      'no_found_rows' => 0,                   //(bool) Default is false. WordPress uses SQL_CALC_FOUND_ROWS in most queries in order to implement pagination. Even when you don’t need pagination at all. By Setting this parameter to true you are telling wordPress not to count the total rows and reducing load on the DB. Pagination will NOT WORK when this parameter is set to true. For more information see: http://flavio.tordini.org/speed-up-wordpress-get_posts-and-query_posts-functions
+      'no_found_rows' => false,               //(bool) Default is false. WordPress uses SQL_CALC_FOUND_ROWS in most queries in order to implement pagination. Even when you don’t need pagination at all. By Setting this parameter to true you are telling wordPress not to count the total rows and reducing load on the DB. Pagination will NOT WORK when this parameter is set to true. For more information see: http://flavio.tordini.org/speed-up-wordpress-get_posts-and-query_posts-functions
       'cache_results' => true,                //(bool) Default is true
       'update_post_term_cache' => true,       //(bool) Default is true
       'update_post_meta_cache' => true        //(bool) Default is true
