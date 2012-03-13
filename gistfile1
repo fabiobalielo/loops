@@ -118,26 +118,26 @@ $args = array(
 																							 
 																							 
 //////Time Parameters - Show posts associated with a certain time period.
-      'year' => 2012,                 				//(int) - 4 digit year (e.g. 2011).
-      'monthnum' => 3,                				//(int) - Month number (from 1 to 12).
-      'w' =>  25,                     				//(int) - Week of the year (from 0 to 53). Uses the MySQL WEEK command. The mode is dependent on the "start_of_week" option.
-      'day' => 17,                    				//(int) - Day of the month (from 1 to 31).
-      'hour' => 13,                   				//(int) - Hour (from 0 to 23).
-      'minute' => 19,                 				//(int) - Minute (from 0 to 60).
-      'second' => 30,                 				//(int) - Second (0 to 60).
+      'year' => 2012,                         //(int) - 4 digit year (e.g. 2011).
+      'monthnum' => 3,                        //(int) - Month number (from 1 to 12).
+      'w' =>  25,                             //(int) - Week of the year (from 0 to 53). Uses the MySQL WEEK command. The mode is dependent on the "start_of_week" option.
+      'day' => 17,                            //(int) - Day of the month (from 1 to 31).
+      'hour' => 13,                           //(int) - Hour (from 0 to 23).
+      'minute' => 19,                         //(int) - Minute (from 0 to 60).
+      'second' => 30,                         //(int) - Second (0 to 60).
 
 
 //////Custom Field Parameters - Show posts associated with a certain custom field.
-      'meta_key' => 'key',                		//(string) - Custom field key.
-      'meta_value' => 'value',            		//(string) - Custom field value.
-      'meta_value_num' => 10,             		//(number) - Custom field value.
-      'meta_compare' => '=',              		//(string) - Operator to test the 'meta_value'. Possible values are '!=', '>', '>=', '<', or '<='. Default value is '='.
-      'meta_query' => array(              		//(array) - Custom field parameters (available with Version 3.1).
+      'meta_key' => 'key',                    //(string) - Custom field key.
+      'meta_value' => 'value',                //(string) - Custom field value.
+      'meta_value_num' => 10,                 //(number) - Custom field value.
+      'meta_compare' => '=',                  //(string) - Operator to test the 'meta_value'. Possible values are '!=', '>', '>=', '<', or '<='. Default value is '='.
+      'meta_query' => array(                  //(array) - Custom field parameters (available with Version 3.1).
          array(
-           'key' => 'color',   					      //(string) - Custom field key.
-           'value' => 'blue'   					      //(string/array) - Custom field value (Note: Array support is limited to a compare value of 'IN', 'NOT IN', 'BETWEEN', or 'NOT BETWEEN')
-           'type' => 'CHAR',   					      //(string) - Custom field type. Possible values are 'NUMERIC', 'BINARY', 'CHAR', 'DATE', 'DATETIME', 'DECIMAL', 'SIGNED', 'TIME', 'UNSIGNED'. Default value is 'CHAR'.
-           'compare' => '='    					      //(string) - Operator to test. Possible values are '=', '!=', '>', '>=', '<', '<=', 'LIKE', 'NOT LIKE', 'IN', 'NOT IN', 'BETWEEN', 'NOT BETWEEN'. Default value is '='.
+           'key' => 'color',                  //(string) - Custom field key.
+           'value' => 'blue'                  //(string/array) - Custom field value (Note: Array support is limited to a compare value of 'IN', 'NOT IN', 'BETWEEN', or 'NOT BETWEEN')
+           'type' => 'CHAR',                  //(string) - Custom field type. Possible values are 'NUMERIC', 'BINARY', 'CHAR', 'DATE', 'DATETIME', 'DECIMAL', 'SIGNED', 'TIME', 'UNSIGNED'. Default value is 'CHAR'.
+           'compare' => '='                   //(string) - Operator to test. Possible values are '=', '!=', '>', '>=', '<', '<=', 'LIKE', 'NOT LIKE', 'IN', 'NOT IN', 'BETWEEN', 'NOT BETWEEN'. Default value is '='.
          ),
          array(
            'key' => 'price',
