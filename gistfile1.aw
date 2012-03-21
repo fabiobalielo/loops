@@ -26,8 +26,8 @@ $args = array(
     'tag__and' => array( 2, 6),               //(array) - use tag ids.
     'tag__in' => array( 2, 6),                //(array) - use tag ids.
     'tag__not_in' => array( 2, 6),            //(array) - use tag ids.
-    'tag_slug__and' => array( 2, 6),          //(array) - use tag slugs.
-    'tag_slug__in' => array( 2, 6),           //(array) - use tag slugs.
+    'tag_slug__and' => array( 'red', 'blue'), //(array) - use tag slugs.
+    'tag_slug__in' => array( 'red', 'blue'),  //(array) - use tag slugs.
   
 //////Taxonomy Parameters - Show posts associated with certain taxonomy.
   //Important Note: tax_query takes an array of tax query arguments arrays (it takes an array of arrays)
