@@ -179,9 +179,3 @@ endif;
 wp_reset_postdata();
 
 ?>
-
-
-
-
-
-http://www.wprecipes.com/how-to-display-the-number-of-results-in-wordpress-search
