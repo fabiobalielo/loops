@@ -149,13 +149,15 @@ $args = array(
 //////Permission Parameters - Display published posts, as well as private posts, if the user has the appropriate capability:
     'perm' => 'readable'                    //(string) Possible values are 'readable', 'editable' (possible more ie all capabilitiealthough I have not tested)
 
-////Parameters relating to caching
+//////Parameters relating to caching
     'no_found_rows' => false,               //(bool) Default is false. WordPress uses SQL_CALC_FOUND_ROWS in most queries in order timplement pagination. Even when you don’t need pagination at all. By Setting this parameter to true you are telling wordPress not tcount the total rows and reducing load on the DB. Pagination will NOT WORK when this parameter is set to true. For more informatiosee: http://flavio.tordini.org/speed-up-wordpress-get_posts-and-query_posts-functions
     'cache_results' => true,                //(bool) Default is true
     'update_post_term_cache' => true,       //(bool) Default is true
-    'update_post_meta_cache' => true        //(bool) Default is true
+    'update_post_meta_cache' => true,       //(bool) Default is true
     //NOTE Caching is a good thing. Setting these to false is generally not advised. For more info on usage see: http://codex.wordpresorg/Class_Reference/WP_Query#Permission_Parameters
 
+//////Search Parameter
+    's' => $s 								//(string) Passes along the query string variable from a search. For example usage see: http://www.wprecipes.com/how-to-display-the-number-of-results-in-wordpress-search 
 //////Post Field Parameters
     //Not sure what these do. For more info see: http://codex.wordpress.org/Class_Reference/WP_Query#Post_Field_Parameters
 
@@ -177,3 +179,9 @@ endif;
 wp_reset_postdata();
 
 ?>
+
+
+
+
+
+http://www.wprecipes.com/how-to-display-the-number-of-results-in-wordpress-search
