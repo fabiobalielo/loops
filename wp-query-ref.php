@@ -91,7 +91,7 @@ $args = array(
     'posts_per_archive_page' => 10,         //(int) - number of posts to show per page - on archive pages only. Over-rides showposts anposts_per_page on pages where is_archive() or is_search() would be true
     'nopaging' => false,                    //(bool) - show all posts or use pagination. Default value is 'false', use paging.
     'paged' => get_query_var('paged'),      //(int) - number of page. Show the posts that would normally show up just on page X when usinthe "Older Entries" link.
-    										//NOTE: Use get_query_var('page'); if you want your query to work in a Page template that you've set as your static front page. The query variable 'page' holds the pagenumber for a single paginated Post or Page that includes the <!--nextpage--> Quicktag in the post content.
+                                            //NOTE: Use get_query_var('page'); if you want your query to work in a Page template that you've set as your static front page. The query variable 'page' holds the pagenumber for a single paginated Post or Page that includes the <!--nextpage--> Quicktag in the post content.
 
 
 
