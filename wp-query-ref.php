@@ -10,7 +10,7 @@
 $args = array( 
   
 //////Author Parameters - Show posts associated with certain author.
-    'author' => 1,2,3,                        //(int) - use author id [use minus (-) to exclude authors by ID ex. 'author' => -1,-2,-3,]
+    'author' => '1,2,3,'                      //(int) - use author id [use minus (-) to exclude authors by ID ex. 'author' => '-1,-2,-3,']
     'author_name' => 'luetkemj',              //(string) - use 'user_nicename' (NOT name)
   
 //////Category Parameters - Show posts associated with certain categories.
@@ -56,7 +56,7 @@ $args = array(
     'page_id' => 1,                         //(int) - use page id.
     'pagename' => 'sample-page',            //(string) - use page slug.
     'pagename' => 'contact_us/canada',      //(string) - Display child page using the slug of the parent and the child page, separated ba slash
-    'post_parent' => 1,                     //(int) - use page id. Return just the child Pages.
+    'post_parent' => 1,                     //(int) - use page id. Return just the child Pages. (Only works with heirachical post types.) 
     'post__in' => array(1,2,3),             //(array) - use post ids. Specify posts to retrieve.
     'post__not_in' => array(1,2,3),         //(array) - use post ids. Specify post NOT to retrieve.
     //NOTE: you cannot combine 'post__in' and 'post__not_in' in the same query
@@ -117,6 +117,8 @@ $args = array(
                                               //'menu_order' - Order by Page Order. Used most often for Pages (Order field in the EdiPage Attributes box) and for Attachments (the integer fields in the Insert / Upload MediGallery dialog), but could be used for any post type with distinct 'menu_order' values (theall default to 0).
                                               //'meta_value' - Note that a 'meta_key=keyname' must also be present in the query. Note alsthat the sorting will be alphabetical which is fine for strings (i.e. words), but can bunexpected for numbers (e.g. 1, 3, 34, 4, 56, 6, etc, rather than 1, 3, 4, 6, 34, 56 as yomight naturally expect).
                                               //'meta_value_num' - Order by numeric meta value (available with Version 2.8). Also notthat a 'meta_key=keyname' must also be present in the query. This value allows for numericasorting as noted above in 'meta_value'.
+                                              //'title menu_order' - Order by both menu_order AND title at the same time. For more info see: http://wordpress.stackexchange.com/questions/2969/order-by-menu-order-and-title
+                                              //'post__in' - Preserve post ID order given in the post__in array (available with Version 3.5).
 																							 
 																							 
 //////Sticky Post Parameters - Show Sticky Posts or ignore them.
@@ -165,7 +167,7 @@ $args = array(
 //////Search Parameter
     's' => $s,                              //(string) - Passes along the query string variable from a search. For example usage see: http://www.wprecipes.com/how-to-display-the-number-of-results-in-wordpress-search 
     'exact' => true                         //(bool) - flag to make it only match whole titles/posts - Default value is false. For more information see: https://gist.github.com/2023628#gistcomment-285118
-    'sentance' => true                      //(bool) - flag to make it do a phrase search - Default value is false. For more information see: https://gist.github.com/2023628#gistcomment-285118
+    'sentence' => true                      //(bool) - flag to make it do a phrase search - Default value is false. For more information see: https://gist.github.com/2023628#gistcomment-285118 NOTE: Previously 'sentence' was spelled 'sentance' per the gist comment linked above. I believe that was a typo. Have not tested personaly.
 
 //////Post Field Parameters
     //Not sure what these do. For more info see: http://codex.wordpress.org/Class_Reference/WP_Query#Post_Field_Parameters
