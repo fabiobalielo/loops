@@ -4,7 +4,7 @@
 * Compiled by luetkemj - luetkemj.com
 *
 * CODEX: http://codex.wordpress.org/Class_Reference/WP_Query
-* Source: http://core.trac.wordpress.org/browser/tags/3.3.1/wp-includes/query.php
+* Source: http://core.trac.wordpress.org/browser/tags/3.5.1/wp-includes/query.php
 */
  
 $args = array( 
