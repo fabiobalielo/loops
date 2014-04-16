@@ -167,11 +167,17 @@ $args = array(
 
 //////Search Parameter
     's' => $s,                              //(string) - Passes along the query string variable from a search. For example usage see: http://www.wprecipes.com/how-to-display-the-number-of-results-in-wordpress-search 
-    'exact' => true                         //(bool) - flag to make it only match whole titles/posts - Default value is false. For more information see: https://gist.github.com/2023628#gistcomment-285118
-    'sentence' => true                      //(bool) - flag to make it do a phrase search - Default value is false. For more information see: https://gist.github.com/2023628#gistcomment-285118 NOTE: Previously 'sentence' was spelled 'sentance' per the gist comment linked above. I believe that was a typo. Have not tested personaly.
+    'exact' => true,                        //(bool) - flag to make it only match whole titles/posts - Default value is false. For more information see: https://gist.github.com/2023628#gistcomment-285118
+    'sentence' => true,                     //(bool) - flag to make it do a phrase search - Default value is false. For more information see: https://gist.github.com/2023628#gistcomment-285118
 
 //////Post Field Parameters
-    //Not sure what these do. For more info see: http://codex.wordpress.org/Class_Reference/WP_Query#Post_Field_Parameters
+    //For more info see: http://codex.wordpress.org/Class_Reference/WP_Query#Return_Fields_Parameter
+    //also https://gist.github.com/luetkemj/2023628/#comment-1003542
+    'fields' => 'ids'                       //(string) - Which fields to return. All fields are returned by default. 
+                                              //Possible values: 
+                                              //'ids'        - Return an array of post IDs. 
+                                              //'id=>parent' - Return an associative array [ parent => ID, … ].
+                                              //Passing anything else will return all fields (default) - an array of post objects.            
 
 //////Filters
     //For more information on available Filters see: http://codex.wordpress.org/Class_Reference/WP_Query#Filters
