@@ -19,7 +19,8 @@ $args = array(
 //////Category Parameters - Show posts associated with certain categories.
     //http://codex.wordpress.org/Class_Reference/WP_Query#Category_Parameters
     'cat' => 5,//(int) - use category id.
-    'category_name' => 'staff', 'news',       //(string) - use category slug (NOT name).
+    'category_name' => 'staff, news',          //(string) - Display posts that have these categories, using category slug.
+    'category_name' => 'staff+news',           //(string) - Display posts that have "all" of these categories, using category slug.
     'category__and' => array( 2, 6 ),         //(array) - use category id.
     'category__in' => array( 2, 6 ),          //(array) - use category id.
     'category__not_in' => array( 2, 6 ),      //(array) - use category id.
